@@ -8,13 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Coffeechat a new way to chat!">
   
-    <title>Coffeechat | <% if(title === "username"){ %>
-        <%= currentUser.username %>
-    <% }else if (title === "join"){ %>
-        Join <%= channel.channel_name %>
-    <% }else{ %>
-        <%= title %>
-    <% } %></title>
+    <title>Coffeechat</title>
+    <!-- Removed fancy title as it broke some pages because it was not defined -->
 
     <!-- Bootstrap Core CSS -->
     <link href="/stylesheets/fontawesome-all.min.css" rel="stylesheet">
@@ -125,9 +120,9 @@ Swal.fire(
 
                         <% if (currentUser.admin === true){  %>
                           <hr>
-                          <small style="color: black">Admin Controls</small>
-                          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-                          <p onclick="eruda.init();eruda.show()" style="color: black"><i class="fas fa-terminal"></i>     Start Console</>
+                          <small style="color: black">Admin Panel</small>
+                          <a href="/admin/panel">
+                          <p onclick="eruda.init();eruda.show()" style="color: black"><i class="fas fa-gavel"></i>     Open Panel</>
                         <% } %>
                       </div>
                     </div>
@@ -143,7 +138,7 @@ Swal.fire(
             <div class="modal-block">
                 <div class="modal-brand">
                     <div class="modal-brand-caption">
-                      <div class="logo">glitch<span>Cord</span></div>
+                      <div class="logo">Coffee<span>Chat</span></div>
                     </div>
                 </div>
                 <div class="modal-block-content">
@@ -160,7 +155,7 @@ Swal.fire(
                             <input type="text" name="channel_name" id="group_name" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <p class="help-block2 mb-25">By creating a channel, you agree to Protech IT Solutions monitoring your usage and censoring when possible. We believe in kindness and will take the appropiate action against the unlawful user.</p>
+                            <p class="help-block2 mb-25">By creating a channel, you agree to Coffeechat monitoring your usage and censoring when possible. We believe in kindness and will take the appropiate action against the unlawful user.</p>
                             <button type="submit" class="btn btn-block btn-radius btn-primary">Create Channel</button>
                         </div>
                     </form>

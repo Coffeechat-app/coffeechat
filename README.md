@@ -1,4 +1,4 @@
-# welcome to glitchchord
+# welcome to coffeechat
 
 -------------
 
